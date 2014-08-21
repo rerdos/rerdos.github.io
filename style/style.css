@@ -1,0 +1,64 @@
+body{
+    background-image: url("bg.png");
+    background-repeat: repeat;
+}
+
+div#site{
+    font-family: Alegreya;
+    width: 900px;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    background: rgba(255, 255, 255, .7);
+    color: #1c1c1c;
+}
+
+div#logo{
+    font-family: AlegreyaBold;
+    text-align: center;
+    font-size: 40px;
+    color: #1c1c1c;
+}
+
+@font-face {
+    font-family:Alegreya;
+    src: url("fonts/alegreya.otf");
+}
+
+@font-face {
+    font-family: AlegreyaBold;
+    src: url("fonts/alegreya-bold.otf");
+}
+
+
+div#search{
+    margin:0 auto;
+    width: 557px;
+    margin-bottom: 20px;
+}
+
+div#search-field{
+    float: left;
+}
+
+
+input#search-button{
+    height: 36px;
+    width: 100px;
+    font-size: 20px;
+    font-family: Alegreya;
+}
+
+input#main-search{
+    height:30px;
+    width:450px;
+    margin-right:3px;
+    font-size: 20px;
+    font-family: Alegreya;
+}
+
+div#footer{
+    margin-top: 20px;
+    text-align: center;
+    color: grey;
+}
