@@ -62,3 +62,62 @@ div#footer{
     text-align: center;
     color: grey;
 }
+
+div#search-result{
+    width: 880px;
+    overflow: hidden;
+    background-color: rgba(240, 240, 240, .4);
+    padding: 10px;
+    border-bottom: 2px solid #e1e1e1;
+
+}
+
+div#search-result:hover{
+    width: 880px;
+    overflow: hidden;
+    background-color: rgba(240, 240, 240, .8);
+    padding: 10px;
+    border-bottom: 2px solid #d6d6d6;
+}
+
+div#search-result:last-child{
+    width: 880px;
+    overflow: hidden;
+    background-color: rgba(240, 240, 240, .4);
+    padding: 10px;
+    border-bottom: none;
+}
+
+div#search-result:last-child:hover{
+    width: 880px;
+    overflow: hidden;
+    background-color: rgba(240, 240, 240, .8);
+    padding: 10px;
+    border-bottom: none;
+}
+
+div#result-data{
+    width: 190px;
+    float: left;
+    text-align: center;
+}
+
+div#result-votes{
+    font-size: 40px;
+}
+
+div#result-content{
+    width: 690px;
+    float: left;
+}
+
+div#result-title{
+    font-size: 20px;
+    border-bottom: 1px solid #9a9a9a;
+    margin-bottom: 5px;
+}
+
+a#result-link{
+    color: inherit;
+    text-decoration: inherit;
+}
