@@ -96,7 +96,45 @@ div#search-result:last-child:hover{
     border-bottom: none;
 }
 
+div#comment-all{
+    width: 880px;
+    overflow: hidden;
+    background-color: rgba(240, 240, 240, .4);
+    padding: 10px;
+    border-bottom: 2px solid #e1e1e1;
+}
+
+div#comment-all:hover{
+    width: 880px;
+    overflow: hidden;
+    background-color: rgba(240, 240, 240, .8);
+    padding: 10px;
+    border-bottom: 2px solid #d6d6d6;
+}
+
+div#comment-all:last-child{
+    width: 880px;
+    overflow: hidden;
+    background-color: rgba(240, 240, 240, .4);
+    padding: 10px;
+    border-bottom: none;
+}
+
+div#comment-all:last-child:hover{
+    width: 880px;
+    overflow: hidden;
+    background-color: rgba(240, 240, 240, .8);
+    padding: 10px;
+    border-bottom: none;
+}
+
 div#result-data{
+    width: 190px;
+    float: left;
+    text-align: center;
+}
+
+div#comment-data{
     width: 190px;
     float: left;
     text-align: center;
@@ -106,8 +144,21 @@ div#result-votes{
     font-size: 40px;
 }
 
+div#comment-votes{
+    font-size: 40px;
+}
+
 div#result-content{
     width: 684px;
+    min-height:98px;
+    float: left;
+    border-left: 1px solid #9a9a9a;
+    padding-left: 5px;
+}
+
+div#comment{
+    width: 684px;
+    min-height:98px;
     float: left;
     border-left: 1px solid #9a9a9a;
     padding-left: 5px;
@@ -127,4 +178,14 @@ a#result-link{
 a#title{
     color: inherit;
     text-decoration: inherit;
+}
+
+a#report{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+a#report:hover{
+    color: #000000;
+    text-decoration: underline;
 }
