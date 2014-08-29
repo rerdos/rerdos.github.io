@@ -107,8 +107,10 @@ div#result-votes{
 }
 
 div#result-content{
-    width: 690px;
+    width: 684px;
     float: left;
+    border-left: 1px solid #9a9a9a;
+    padding-left: 5px;
 }
 
 div#result-title{
@@ -118,6 +120,11 @@ div#result-title{
 }
 
 a#result-link{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+a#title{
     color: inherit;
     text-decoration: inherit;
 }
