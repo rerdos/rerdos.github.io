@@ -96,7 +96,7 @@ div#search-result:last-child:hover{
     border-bottom: none;
 }
 
-div#comment-all{
+div#comment-container{
     width: 880px;
     overflow: hidden;
     background-color: rgba(240, 240, 240, .4);
@@ -104,7 +104,7 @@ div#comment-all{
     border-bottom: 2px solid #e1e1e1;
 }
 
-div#comment-all:hover{
+div#comment-container:hover{
     width: 880px;
     overflow: hidden;
     background-color: rgba(240, 240, 240, .8);
@@ -112,7 +112,7 @@ div#comment-all:hover{
     border-bottom: 2px solid #d6d6d6;
 }
 
-div#comment-all:last-child{
+div#comment-container:last-child{
     width: 880px;
     overflow: hidden;
     background-color: rgba(240, 240, 240, .4);
@@ -120,7 +120,39 @@ div#comment-all:last-child{
     border-bottom: none;
 }
 
-div#comment-all:last-child:hover{
+div#comment-container:last-child:hover{
+    width: 880px;
+    overflow: hidden;
+    background-color: rgba(240, 240, 240, .8);
+    padding: 10px;
+    border-bottom: none;
+}
+
+div#new-comment{
+    width: 880px;
+    overflow: hidden;
+    background-color: rgba(240, 240, 240, .4);
+    padding: 10px;
+    border-bottom: 2px solid #e1e1e1;
+}
+
+div#new-comment:hover{
+    width: 880px;
+    overflow: hidden;
+    background-color: rgba(240, 240, 240, .8);
+    padding: 10px;
+    border-bottom: 2px solid #d6d6d6;
+}
+
+div#new-comment:last-child{
+    width: 880px;
+    overflow: hidden;
+    background-color: rgba(240, 240, 240, .4);
+    padding: 10px;
+    border-bottom: none;
+}
+
+div#new-comment:last-child:hover{
     width: 880px;
     overflow: hidden;
     background-color: rgba(240, 240, 240, .8);
@@ -146,6 +178,13 @@ div#result-votes{
 
 div#comment-votes{
     font-size: 40px;
+}
+
+div#new-comment-title{
+    padding-top: 10px;
+    font-size: 25px;
+    height:160px;
+    line-height: 160px;
 }
 
 div#result-content{
@@ -187,5 +226,34 @@ a#report{
 
 a#report:hover{
     color: #000000;
+    text-decoration: underline;
+}
+
+textarea#new-comment-area{
+    width:680px;
+    height: 100px;
+}
+
+input#new-comment-button{
+    height: 36px;
+    width: 686px;
+    font-size: 20px;
+    font-family: Alegreya;
+}
+
+div#new-content-warning{
+    padding:5px;
+    margin-bottom: 5px;
+    background-color: rgba(0, 19, 255, 0.20);
+    border:1px solid rgba(0,19,255,0.4);
+}
+
+a#link-tutorial{
+    color:inherit;
+    text-decoration: underline;
+}
+
+a#link-tutorial:hover{
+    color:#000000;
     text-decoration: underline;
 }
