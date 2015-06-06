@@ -1,0 +1,12 @@
+[
+  {
+    "id": 0,
+    "name": "Intermediate",
+    "percentages": [0, 25, 40, 60, 80]
+  },
+  {
+    "id": 1,
+    "name": "Advanced",
+    "percentages": [0, 25, 33, 47, 60]
+  }
+]
