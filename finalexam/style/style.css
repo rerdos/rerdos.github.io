@@ -36,6 +36,7 @@ div#title {
 
 nav ul {
     overflow: hidden;
+    float: left;
 }
 
 nav ul li {
@@ -51,8 +52,17 @@ nav ul li:hover {
     background: linear-gradient(#252525, #434343);
 }
 
+
 .active {
     background: linear-gradient(#252525, #434343);
+}
+
+span#developer {
+    float: right;
+    line-height: 49px;
+    font-size: 11px;
+    margin-right: 10px;
+    color: #898989;
 }
 
 h1, h2 {
