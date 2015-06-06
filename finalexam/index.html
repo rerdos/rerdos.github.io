@@ -45,7 +45,7 @@
                     </tr>
                     <tr ng-repeat="grade in test.percentages | orderBy:'-id'">
                         <td>{{grade.id+1}}</td>
-                        <td>{{test.percentages[grade.id].value}}% - {{grade.id===(test.percentages.length-1)?"100":test.percentages[grade.id+1].value}}%</td>
+                        <td>{{test.percentages[grade.id].value}}% - {{grade.id===(test.percentages.length-1)?"100":test.percentages[grade.id+1].value-1}}%</td>
                     </tr>
                 </table>
             </div>
