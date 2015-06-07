@@ -18,7 +18,7 @@
         <div>
             <nav class="fade-in">
                 <ul>
-                    <li ng-repeat="menu in menuData" ng-class="{'active': menu.id===activeMenuIndex}">{{menu.name}}</li>
+                    <li ng-repeat="menu in menuData" ng-click="selectMenu(menu.id)" ng-class="{'active': menu.id===activeMenuIndex}">{{menu.name}}</li>
                 </ul>
             </nav>
             <span id="developer" class="fade-in">
@@ -31,7 +31,18 @@
         <h2>THE APP</h2>
     </div>
     <section class="fade-in">
-        <div id="info">
+        <div id="my-grades" ng-show="activeMenuIndex===0">
+            <h1 class="center">There are no grades. :(</h1>
+            <hr>
+            <div ng-hide="isShowEdit">
+                <button type="button" class="btn btn-lg btn-dark" ng-click="toggleEdit()">New grade</button>
+            </div>
+            <div ng-show="isShowEdit">
+                Editing something...
+                <button type="button" class="btn btn-lg btn-dark" ng-click="toggleEdit()">Cancel</button>
+            </div>
+        </div>
+        <div id="info" ng-show="activeMenuIndex===1">
             <span class="bold">Please note:</span> These data are only valid for the Hungarian school leaving exams, also known as Matura exams.
             <div ng-repeat="test in testTypes" class="exam">
                 <h3>

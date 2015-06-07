@@ -75,6 +75,22 @@ nav ul li:hover {
     background: linear-gradient(#252525, #434343);
 }
 
+.center {
+    text-align: center;
+}
+
+.btn-dark {
+    color: #fff;
+    background-color: #1c1c1c;
+    border-color: #101010;
+}
+
+.btn-dark:hover {
+    color: #acacac;
+    background-color: #1c1c1c;
+    border-color: #101010;
+}
+
 span#developer {
     float: right;
     line-height: 49px;
