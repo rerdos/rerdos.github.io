@@ -17,7 +17,11 @@ function mainCtrl($scope, $http, menuData, errorMessages) {
     $scope.updateExam = updateExam;
     $scope.isNewExam = true;
 
-    $scope.exams = [];
+    if (localStorage.getItem('Exams')===null) {
+        $scope.exams = [];
+    } else {
+        $scope.exams = JSON.parse(localStorage.getItem('Exams'));
+    }
 
     function selectMenu(id) {
         $scope.activeMenuIndex = id;
@@ -35,8 +39,11 @@ function mainCtrl($scope, $http, menuData, errorMessages) {
     }
 
     function updateExam(id) {
-        $scope.isNewExam = false;
+        $scope.isNewExam = !$scope.isNewExam;
         $scope.exam = angular.copy($scope.exams[id]);
+        if ($scope.isNewExam) {
+            $scope.exam = {examName: "", type: 0, writtenTotal: "", writtenEarned: "", total: ""};
+        }
         toggleEdit();
     }
 
@@ -44,12 +51,14 @@ function mainCtrl($scope, $http, menuData, errorMessages) {
         if(confirm("Do you really want to delete " + $scope.exams[id].examName + " from the list?")){
             $scope.exams.splice(id, 1);
         }
+        setLocalStorage();
     }
 
     function deleteAll() {
         if(confirm("Do you really want to delete EVERY exam from the list?")){
             $scope.exams = [];
         }
+        setLocalStorage();
     }
 
     function saveExam(id) {
@@ -62,6 +71,7 @@ function mainCtrl($scope, $http, menuData, errorMessages) {
                 toggleEdit();
                 $scope.error = false;
                 $scope.exam = {examName: "", type: 0, writtenTotal: "", writtenEarned: "", total: ""};
+                setLocalStorage();
             } else {
                 $scope.exams[id] = angular.copy($scope.exam);
                 $scope.exams[$scope.exams.length - 1].currentGrade = currentGrade($scope.exams[$scope.exams.length - 1].type, $scope.exams[$scope.exams.length - 1].writtenEarned / $scope.exams[$scope.exams.length - 1].total * 100);
@@ -69,6 +79,7 @@ function mainCtrl($scope, $http, menuData, errorMessages) {
                 toggleEdit();
                 $scope.exam = {examName: "", type: 0, writtenTotal: "", writtenEarned: "", total: ""};
                 $scope.isNewExam = true;
+                setLocalStorage();
             }
         } else {
             $scope.error = true;
@@ -84,9 +95,11 @@ function mainCtrl($scope, $http, menuData, errorMessages) {
     function bestGrade(typeId, point, writtenTotal, total) {
         console.log(total-writtenTotal+parseInt(point));
         for (var i=0; i<$scope.testTypes[typeId].percentages.length && !($scope.testTypes[typeId].percentages[i].value>(total-writtenTotal+parseInt(point))/total*100); i++) {}
-
-
         return i;
+    }
+
+    function setLocalStorage() {
+        localStorage.setItem('Exams', JSON.stringify($scope.exams));
     }
 
     function formValidator() {
