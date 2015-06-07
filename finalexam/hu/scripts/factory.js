@@ -19,7 +19,7 @@ angular.module('finalExam')
             },
             {
                 "id": 2,
-                "error": "Minde mezőt ki kell tölteni."
+                "error": "Minden mezőt ki kell tölteni."
             },
             {
                 "id": 3,
@@ -31,7 +31,7 @@ angular.module('finalExam')
             },
             {
                 "id": 5,
-                "error": "Az írásbeli összpontszáma nem lehet több az egész vizsga pontszáma."
+                "error": "Az írásbeli összpontszáma nem lehet több az egész vizsga pontszámánál."
             }
         ];
     });
