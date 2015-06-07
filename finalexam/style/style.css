@@ -79,6 +79,10 @@ nav ul li:hover {
     text-align: center;
 }
 
+.right {
+    float: right;
+}
+
 .btn-dark {
     color: #fff;
     background-color: #1c1c1c;

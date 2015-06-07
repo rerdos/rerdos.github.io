@@ -32,14 +32,47 @@
     </div>
     <section class="fade-in">
         <div id="my-grades" ng-show="activeMenuIndex===0">
-            <h1 class="center">There are no grades. :(</h1>
+            <h1 class="center" ng-show="exams[0]===undefined">There are no grades. :(</h1>
+            <div ng-repeat="exam in exams">
+                Exam name: {{exam.examName}}
+                <hr>
+            </div>
             <hr>
             <div ng-hide="isShowEdit">
                 <button type="button" class="btn btn-lg btn-dark" ng-click="toggleEdit()">New grade</button>
             </div>
             <div ng-show="isShowEdit">
-                Editing something...
-                <button type="button" class="btn btn-lg btn-dark" ng-click="toggleEdit()">Cancel</button>
+                <h2>Add {{exam.examName}}</h2>
+                <div class="alert alert-danger" role="alert" ng-show="error">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Error:</span>
+                    {{errorMessage}}
+                </div>
+                <form ng-submit="saveExam()">
+                    <div class="form-group">
+                        <label for="exam-name">Name of the exam:</label>
+                        <input type="text" class="form-control" id="exam-name" ng-model="exam.examName">
+                    </div>
+                    <div class="form-group">
+                        <label for="exam-type">Type of the exam:</label>
+                        <select class="form-control" id="exam-type" ng-model="exam.type" ng-options="type.id as type.name for type in testTypes">
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="written-total-points">Total points of the written section:</label>
+                        <input type="text" class="form-control" id="written-total-points" ng-model="exam.writtenTotal">
+                    </div>
+                    <div class="form-group">
+                        <label for="written-earned-points">Earned points of the written section:</label>
+                        <input type="text" class="form-control" id="written-earned-points" ng-model="exam.writtenEarned">
+                    </div>
+                    <div class="form-group">
+                        <label for="total-points">TOTAL points of the exam:</label>
+                        <input type="text" class="form-control" id="total-points" ng-model="exam.total">
+                    </div>
+                    <input type="submit" class="btn btn-lg btn-dark"></input>
+                    <button type="button" class="btn btn-lg btn-dark right" ng-click="toggleEdit()">Cancel</button>
+                </form>
             </div>
         </div>
         <div id="info" ng-show="activeMenuIndex===1">
