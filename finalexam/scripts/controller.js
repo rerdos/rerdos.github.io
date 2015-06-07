@@ -6,12 +6,15 @@ function mainCtrl($scope, $http, menuData, errorMessages) {
     $scope.selectMenu = selectMenu;
     $scope.isShowEdit = false;
     $scope.toggleEdit = toggleEdit;
+    $scope.cancelEdit = cancelEdit;
     $scope.saveExam = saveExam;
     $scope.exam = {examName: "",type: 0, writtenTotal: "", writtenEarned: "", total: ""};
     $scope.error = false;
+    $scope.Math = window.Math;
+    $scope.parseInt = window.parseInt;
 
     $scope.exams = [];
-
+    
     function selectMenu(id) {
         $scope.activeMenuIndex = id;
     }
@@ -20,17 +23,38 @@ function mainCtrl($scope, $http, menuData, errorMessages) {
         $scope.isShowEdit = !$scope.isShowEdit;
     }
 
+    function cancelEdit() {
+        toggleEdit();
+        $scope.error = false;
+        $scope.exam = {examName: "",type: 0, writtenTotal: "", writtenEarned: "", total: ""};
+    }
+
     function saveExam() {
         if (formValidator()===0) {
-            $scope.error = false;
             $scope.exams.push(angular.copy($scope.exam));
             $scope.exams[$scope.exams.length-1].id = $scope.exams.length-1;
+            $scope.exams[$scope.exams.length-1].currentGrade = currentGrade($scope.exams[$scope.exams.length-1].type, $scope.exams[$scope.exams.length-1].writtenEarned/$scope.exams[$scope.exams.length-1].total*100);
+            $scope.exams[$scope.exams.length-1].bestGrade = bestGrade($scope.exams[$scope.exams.length-1].type, $scope.exams[$scope.exams.length-1].writtenEarned, $scope.exams[$scope.exams.length-1].writtenTotal, $scope.exams[$scope.exams.length-1].total);
             toggleEdit();
+            $scope.error = false;
             $scope.exam = {examName: "",type: 0, writtenTotal: "", writtenEarned: "", total: ""};
         } else {
             $scope.error = true;
             $scope.errorMessage = errorMessages[formValidator()-1].error;
         }
+    }
+
+    function currentGrade(typeId, percentage) {
+        for (var i=0; i<$scope.testTypes[typeId].percentages.length && !($scope.testTypes[typeId].percentages[i].value>percentage); i++) {}
+        return i;
+    }
+
+    function bestGrade(typeId, point, writtenTotal, total) {
+        console.log(total-writtenTotal+parseInt(point));
+        for (var i=0; i<$scope.testTypes[typeId].percentages.length && !($scope.testTypes[typeId].percentages[i].value>(total-writtenTotal+parseInt(point))/total*100); i++) {}
+
+
+        return i;
     }
 
     function formValidator() {

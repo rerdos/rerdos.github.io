@@ -34,8 +34,15 @@
         <div id="my-grades" ng-show="activeMenuIndex===0">
             <h1 class="center" ng-show="exams[0]===undefined">There are no grades. :(</h1>
             <div ng-repeat="exam in exams">
-                Exam name: {{exam.examName}}
-                <hr>
+                <h3>
+                    {{exam.examName}}
+                </h3>
+                Exam type: <span class="bold">{{testTypes[exam.type].name}}</span>.<br>
+                You have earned: <span class="bold">{{exam.writtenEarned}} points</span> ({{Math.floor(exam.writtenEarned/exam.total*100)}}%).<br>
+                Total points: <span class="bold">{{exam.total}} points</span>.<br>
+                Current grade: <span class="bold">{{exam.currentGrade}}</span>.<br>
+                Next grade: <span class="bold">{{exam.currentGrade===5?"You already have the best grade. Well done":((exam.total-exam.writtenTotal)<(testTypes[exam.type].percentages[exam.currentGrade].value/100*parseInt(exam.total)-parseInt(exam.writtenEarned))? + "Unfortunately, you cannot get better grade": exam.currentGrade+1 + " (if you make at least " + (testTypes[exam.type].percentages[exam.currentGrade].value/100*parseInt(exam.total)-parseInt(exam.writtenEarned)) + " points out of " + (parseInt(exam.total)-parseInt(exam.writtenTotal)) + ")")}}</span>.<br>
+                Best grade: <span class="bold">{{exam.currentGrade>=4 || ((exam.total-exam.writtenTotal)<(testTypes[exam.type].percentages[exam.currentGrade].value/100*parseInt(exam.total)-parseInt(exam.writtenEarned)))?"There isn't better grade":exam.bestGrade + " (if you make at least " + (testTypes[exam.type].percentages[exam.bestGrade-1].value/100*parseInt(exam.total)-parseInt(exam.writtenEarned)) + " points out of " + (parseInt(exam.total)-parseInt(exam.writtenTotal)) + ")"}}</span>.
             </div>
             <hr>
             <div ng-hide="isShowEdit">
@@ -71,7 +78,7 @@
                         <input type="text" class="form-control" id="total-points" ng-model="exam.total">
                     </div>
                     <input type="submit" class="btn btn-lg btn-dark"></input>
-                    <button type="button" class="btn btn-lg btn-dark right" ng-click="toggleEdit()">Cancel</button>
+                    <button type="button" class="btn btn-lg btn-dark right" ng-click="cancelEdit()">Cancel</button>
                 </form>
             </div>
         </div>
