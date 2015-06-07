@@ -12,9 +12,11 @@ function mainCtrl($scope, $http, menuData, errorMessages) {
     $scope.error = false;
     $scope.Math = window.Math;
     $scope.parseInt = window.parseInt;
+    $scope.deleteExam = deleteExam;
+    $scope.deleteAll = deleteAll;
 
     $scope.exams = [];
-    
+
     function selectMenu(id) {
         $scope.activeMenuIndex = id;
     }
@@ -27,6 +29,18 @@ function mainCtrl($scope, $http, menuData, errorMessages) {
         toggleEdit();
         $scope.error = false;
         $scope.exam = {examName: "",type: 0, writtenTotal: "", writtenEarned: "", total: ""};
+    }
+
+    function deleteExam(id) {
+        if(confirm("Do you really want to delete " + $scope.exams[id].examName + " from the list?")){
+            $scope.exams.splice(id, 1);
+        }
+    }
+
+    function deleteAll() {
+        if(confirm("Do you really want to delete EVERY exam from the list?")){
+            $scope.exams = [];
+        }
     }
 
     function saveExam() {

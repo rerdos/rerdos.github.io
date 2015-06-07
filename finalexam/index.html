@@ -35,7 +35,7 @@
             <h1 class="center" ng-show="exams[0]===undefined">There are no grades. :(</h1>
             <div ng-repeat="exam in exams">
                 <h3>
-                    {{exam.examName}}
+                    {{exam.examName}} <span class="glyphicon glyphicon-pencil pointer" aria-hidden="true"></span> <span ng-click="deleteExam(exam.id)" class="glyphicon glyphicon-remove pointer" aria-hidden="true"></span>
                 </h3>
                 Exam type: <span class="bold">{{testTypes[exam.type].name}}</span>.<br>
                 You have earned: <span class="bold">{{exam.writtenEarned}} points</span> ({{Math.floor(exam.writtenEarned/exam.total*100)}}%).<br>
@@ -47,6 +47,7 @@
             <hr>
             <div ng-hide="isShowEdit">
                 <button type="button" class="btn btn-lg btn-dark" ng-click="toggleEdit()">New grade</button>
+                <button type="button" class="btn btn-lg btn-dark" ng-hide="exams[0]===undefined" ng-click="deleteAll()">Remove all</button>
             </div>
             <div ng-show="isShowEdit">
                 <h2>Add {{exam.examName}}</h2>

@@ -83,6 +83,10 @@ nav ul li:hover {
     float: right;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 .btn-dark {
     color: #fff;
     background-color: #1c1c1c;
