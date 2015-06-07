@@ -14,6 +14,8 @@ function mainCtrl($scope, $http, menuData, errorMessages) {
     $scope.parseInt = window.parseInt;
     $scope.deleteExam = deleteExam;
     $scope.deleteAll = deleteAll;
+    $scope.updateExam = updateExam;
+    $scope.isNewExam = true;
 
     $scope.exams = [];
 
@@ -29,6 +31,13 @@ function mainCtrl($scope, $http, menuData, errorMessages) {
         toggleEdit();
         $scope.error = false;
         $scope.exam = {examName: "",type: 0, writtenTotal: "", writtenEarned: "", total: ""};
+        $scope.isNewExam = true;
+    }
+
+    function updateExam(id) {
+        $scope.isNewExam = false;
+        $scope.exam = angular.copy($scope.exams[id]);
+        toggleEdit();
     }
 
     function deleteExam(id) {
@@ -43,15 +52,24 @@ function mainCtrl($scope, $http, menuData, errorMessages) {
         }
     }
 
-    function saveExam() {
+    function saveExam(id) {
         if (formValidator()===0) {
-            $scope.exams.push(angular.copy($scope.exam));
-            $scope.exams[$scope.exams.length-1].id = $scope.exams.length-1;
-            $scope.exams[$scope.exams.length-1].currentGrade = currentGrade($scope.exams[$scope.exams.length-1].type, $scope.exams[$scope.exams.length-1].writtenEarned/$scope.exams[$scope.exams.length-1].total*100);
-            $scope.exams[$scope.exams.length-1].bestGrade = bestGrade($scope.exams[$scope.exams.length-1].type, $scope.exams[$scope.exams.length-1].writtenEarned, $scope.exams[$scope.exams.length-1].writtenTotal, $scope.exams[$scope.exams.length-1].total);
-            toggleEdit();
-            $scope.error = false;
-            $scope.exam = {examName: "",type: 0, writtenTotal: "", writtenEarned: "", total: ""};
+            if ($scope.isNewExam) {
+                $scope.exams.push(angular.copy($scope.exam));
+                $scope.exams[$scope.exams.length - 1].id = $scope.exams.length - 1;
+                $scope.exams[$scope.exams.length - 1].currentGrade = currentGrade($scope.exams[$scope.exams.length - 1].type, $scope.exams[$scope.exams.length - 1].writtenEarned / $scope.exams[$scope.exams.length - 1].total * 100);
+                $scope.exams[$scope.exams.length - 1].bestGrade = bestGrade($scope.exams[$scope.exams.length - 1].type, $scope.exams[$scope.exams.length - 1].writtenEarned, $scope.exams[$scope.exams.length - 1].writtenTotal, $scope.exams[$scope.exams.length - 1].total);
+                toggleEdit();
+                $scope.error = false;
+                $scope.exam = {examName: "", type: 0, writtenTotal: "", writtenEarned: "", total: ""};
+            } else {
+                $scope.exams[id] = angular.copy($scope.exam);
+                $scope.exams[$scope.exams.length - 1].currentGrade = currentGrade($scope.exams[$scope.exams.length - 1].type, $scope.exams[$scope.exams.length - 1].writtenEarned / $scope.exams[$scope.exams.length - 1].total * 100);
+                $scope.exams[$scope.exams.length - 1].bestGrade = bestGrade($scope.exams[$scope.exams.length - 1].type, $scope.exams[$scope.exams.length - 1].writtenEarned, $scope.exams[$scope.exams.length - 1].writtenTotal, $scope.exams[$scope.exams.length - 1].total);
+                toggleEdit();
+                $scope.exam = {examName: "", type: 0, writtenTotal: "", writtenEarned: "", total: ""};
+                $scope.isNewExam = true;
+            }
         } else {
             $scope.error = true;
             $scope.errorMessage = errorMessages[formValidator()-1].error;
