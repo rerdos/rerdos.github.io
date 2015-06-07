@@ -37,6 +37,11 @@ header {
     border-bottom: 1px solid #232323;
 }
 
+header div {
+    margin: 0 auto;
+    width: 900px;
+}
+
 div#title {
     text-align: center;
 }
@@ -44,6 +49,7 @@ div#title {
 nav ul {
     overflow: hidden;
     float: left;
+    margin-left: -40px;
 }
 
 nav ul li {
