@@ -1,7 +1,8 @@
-'use strict';
-mainCtrl.$inject = ['$scope', '$http'];
-function mainCtrl($scope, $http) {
+mainCtrl.$inject = ['$scope', '$http', 'menuData'];
+function mainCtrl($scope, $http, menuData) {
     $scope.testTypes = [];
+    $scope.menuData = menuData;
+    $scope.activeMenuIndex = 0;
 
     $http.get('data/data.json').
         success(function(data) {
@@ -13,6 +14,6 @@ function mainCtrl($scope, $http) {
         });
 }
 
-angular.module('finalExam', [])
+angular.module('finalExam')
     .controller('mainCtrl', mainCtrl);
 
