@@ -1,0 +1,40 @@
+@font-face {
+    src: url('HelveticaNeue-Light.otf');
+    font-family: 'HelveticaNeueLight';
+}
+
+
+
+.center {
+    text-align: center;
+}
+
+.font-lg {
+    font-size: 72px;
+}
+
+.font-med {
+    font-size: 32px;
+}
+
+.font-sm {
+    font-size: 16px;
+}
+
+h1, h2 {
+    font-family: 'HelveticaNeueLight';
+}
+
+.button {
+    margin-top: 5px;
+    width: 100%;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+div#wrapper {
+    margin: 0 auto;
+    width: 900px;
+}
