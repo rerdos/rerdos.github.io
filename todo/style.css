@@ -21,6 +21,24 @@
     font-size: 16px;
 }
 
+.bold {
+    font-weight: bold;
+}
+
+.right {
+    float: right;
+}
+
+.icon {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+
 h1, h2 {
     font-family: 'HelveticaNeueLight';
 }
