@@ -4,41 +4,23 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-            display: none !important;
-        }
-    </style>
     <title>
         What to do?
     </title>
 </head>
-<body ng-controller="mainCtrl" ng-cloak="">
+<body ng-controller="mainCtrl">
     <div id="wrapper">
         <h1 class="center font-lg">What to do?</h1>
         <h2 class="center font-med">An easy todo list</h2>
-        <div class="alert alert-danger" role="alert" ng-show="error.isError">
-            <span class="bold">Ooops...</span> {{errorMessages[error.errorId].error}}
-            <span class="glyphicon glyphicon-remove right icon pointer" ng-click="removeError()" aria-hidden="true"></span>
-        </div>
         <ul class="list-group">
-            <li ng-class="{'list-group-item-success': todo.done, 'list-group-item-info': isEdit===todo.id}" class="list-group-item font-sm" ng-repeat="todo in todos">
-                 {{todo.description}}
-                <span ng-click="removeTodo(todo.id)" class="glyphicon glyphicon-remove icon pointer right"></span>
-                <span ng-click="editTodo(todo.id)" class="glyphicon glyphicon-pencil icon pointer right"></span>
-                <span ng-click="toggleDone(todo.id)" class="glyphicon glyphicon-ok icon pointer right"></span>
+            <li class="list-group-item font-sm" ng-repeat="todo in todos">
+                {{todo.description}}
             </li>
         </ul>
-        <form ng-show="isEdit" ng-submit="addTodo()">
+        <form>
             <div class="form-group">
                 <input type="text" class="form-control input-lg" ng-model="newTodo.description" placeholder="New todo">
-                <input type="submit" value="Save" class="btn btn-primary btn-lg button">
-            </div>
-        </form>
-        <form ng-show="!isEdit" ng-submit="addTodo()">
-            <div class="form-group">
-                <input type="text" class="form-control input-lg" ng-model="newTodo.description" placeholder="New todo">
-                <input type="submit" value="Save" class="btn btn-primary btn-lg button">
+                <input type="submit" class="btn btn-primary btn-lg button">
             </div>
         </form>
     </div>
