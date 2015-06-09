@@ -14,9 +14,10 @@
         <h1 class="center font-lg">What to do?</h1>
         <h2 class="center font-med">An easy todo list</h2>
         <ul class="list-group">
+            <li ng-show="isEmpty()" class="list-group-item font-med main">You don't have anything to do. :(</li>
             <li class="list-group-item font-sm" ng-repeat="todo in todos">
                 {{todo.description}}
-                <span class="glyphicon glyphicon-remove toolbar"></span>
+                <span ng-click="removeTodo($index)" class="glyphicon glyphicon-remove toolbar"></span>
                 <span class="glyphicon glyphicon-pencil toolbar"></span>
                 <span class="glyphicon glyphicon-ok toolbar"></span>
             </li>
@@ -24,7 +25,7 @@
         <form>
             <div class="form-group">
                 <input type="text" class="form-control input-lg" ng-model="newTodo.description" placeholder="New todo">
-                <input type="submit" class="btn btn-primary btn-lg button">
+                <input type="submit" value="Save" class="btn btn-primary btn-lg button">
             </div>
         </form>
         <div id="information">
