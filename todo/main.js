@@ -1,10 +1,22 @@
 (function(){
     mainCtrl.$inject = ['$scope', '$http'];
     function mainCtrl($scope, $http) {
+        $scope.isEdit = {"index": 0, "isEdit": false};
         $scope.isEmpty = isEmpty;
+        $scope.isValid = isValid;
+        $scope.newTodo = {};
         $scope.removeTodo = removeTodo;
         $scope.todos = [];
         $scope.toggleDone = toggleDone;
+
+        function isValid() {
+            if ($scope.newTodo.description !== undefined) {
+                console.log($scope.newTodo.description.length);
+                    return !($scope.newTodo.description.length === 0 || $scope.newTodo.description.length > 50);
+            } else {
+                return false;
+            }
+        }
 
         function isEmpty() {
             return !($scope.todos.length > 0);
