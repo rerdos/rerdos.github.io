@@ -1,5 +1,6 @@
-$largeFont: 72px;
+$largeFont: 69px;
 $siteWidth: 900px;
+$informationColor: #8b8b8b;
 
 @font-face {
   src: url('HelveticaNeue-Light.otf');
@@ -38,4 +39,8 @@ h2 {
 div#wrapper {
   margin: 0 auto;
   width: $siteWidth;
+}
+
+div#information {
+  color: $informationColor;
 }
