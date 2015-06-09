@@ -1,0 +1,41 @@
+$largeFont: 72px;
+$siteWidth: 900px;
+
+@font-face {
+  src: url('HelveticaNeue-Light.otf');
+  font-family: 'HelveticaNeueLight';
+}
+
+.center {
+  text-align: center;
+}
+
+.font-lg {
+  font-size: $largeFont;
+}
+
+.font-med {
+  font-size: $largeFont/2;
+}
+
+.font-sm {
+  font-size: $largeFont/4;
+}
+
+h1, h2 {
+  font-family: 'HelveticaNeueLight';
+}
+
+.button {
+  margin-top: 5px;
+  width: 100%;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+div#wrapper {
+  margin: 0 auto;
+  width: $siteWidth;
+}
