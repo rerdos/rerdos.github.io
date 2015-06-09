@@ -4,6 +4,7 @@
         $scope.isEmpty = isEmpty;
         $scope.removeTodo = removeTodo;
         $scope.todos = [];
+        $scope.toggleDone = toggleDone;
 
         function isEmpty() {
             return !($scope.todos.length > 0);
@@ -11,6 +12,10 @@
 
         function removeTodo(index) {
             $scope.todos.splice(index, 1);
+        }
+
+        function toggleDone(index) {
+            $scope.todos[index].done = !$scope.todos[index].done;
         }
 
         $http.get('data.json')
