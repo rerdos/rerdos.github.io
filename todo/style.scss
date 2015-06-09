@@ -11,6 +11,12 @@ $informationColor: #8b8b8b;
   text-align: center;
 }
 
+.toolbar {
+  float: right;
+  margin-left: 10px;
+  line-height: 23px;
+}
+
 .font-lg {
   font-size: $largeFont;
 }
