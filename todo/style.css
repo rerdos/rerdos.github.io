@@ -1,6 +1,9 @@
 @font-face {
   src: url("HelveticaNeue-Light.otf");
   font-family: 'HelveticaNeueLight'; }
+.bold {
+  font-weight: bold; }
+
 .center {
   text-align: center; }
 

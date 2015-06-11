@@ -15,10 +15,10 @@
         <h2 class="center font-med">An easy todo list</h2>
         <ul class="list-group">
             <li ng-show="isEmpty()" class="list-group-item font-med main">You don't have anything to do. :(</li>
-            <li ng-repeat="todo in todos" ng-class="{'list-group-item-success': todo.done}" class="list-group-item font-sm">
+            <li ng-repeat="todo in todos" ng-class="{'list-group-item-success': todo.done, 'bold': isEdit.value && todo.id === isEdit.id}" class="list-group-item font-sm">
                 {{todo.description}}
                 <span ng-click="removeTodo($index)" class="glyphicon glyphicon-remove toolbar"></span>
-                <span class="glyphicon glyphicon-pencil toolbar"></span>
+                <span ng-click="toggleEdit($index)" class="glyphicon glyphicon-pencil toolbar"></span>
                 <span ng-click="toggleDone($index)" class="glyphicon glyphicon-ok toolbar"></span>
             </li>
         </ul>
