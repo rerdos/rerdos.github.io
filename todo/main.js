@@ -25,10 +25,12 @@
         }
         
         function removeTodo(index) {
-            $scope.todos.splice(index, 1);
             if ($scope.isEdit.value) {
-                toggleEdit(index);
+                $scope.isEdit.value = false;
+                $scope.isEdit.id = null;
+                $scope.newTodo = {};
             }
+            $scope.todos.splice(index, 1);
         }
 
         function saveTodo() {
