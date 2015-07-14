@@ -1,0 +1,298 @@
+body {
+    background-image: url("bg.png");
+    background-repeat: repeat;
+}
+
+div#site {
+    font-family: Alegreya;
+    width: 900px;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    background: rgba(255, 255, 255, .7);
+    color: #1c1c1c;
+}
+
+div#logo {
+    font-family: AlegreyaBold;
+    text-align: center;
+    font-size: 40px;
+    color: #1c1c1c;
+}
+
+@font-face {
+    font-family: Alegreya;
+    src: url("fonts/alegreya.otf");
+}
+
+@font-face {
+    font-family: AlegreyaBold;
+    src: url("fonts/alegreya-bold.otf");
+}
+
+div#search {
+    margin: 0 auto;
+    width: 557px;
+    margin-bottom: 20px;
+}
+
+div#search-field {
+    float: left;
+}
+
+input#search-button {
+    height: 36px;
+    width: 100px;
+    font-size: 20px;
+    font-family: Alegreya;
+}
+
+input#main-search {
+    height: 30px;
+    width: 450px;
+    margin-right: 3px;
+    font-size: 20px;
+    font-family: Alegreya;
+}
+
+div#footer {
+    margin-top: 20px;
+    text-align: center;
+    color: grey;
+}
+
+div#search-result {
+    width: 880px;
+    overflow: hidden;
+    background-color: rgba(240, 240, 240, .4);
+    padding: 10px;
+    border-bottom: 2px solid #e1e1e1;
+
+}
+
+div#search-result:hover {
+    width: 880px;
+    overflow: hidden;
+    background-color: rgba(240, 240, 240, .8);
+    padding: 10px;
+    border-bottom: 2px solid #d6d6d6;
+}
+
+div#search-result:last-child {
+    width: 880px;
+    overflow: hidden;
+    background-color: rgba(240, 240, 240, .4);
+    padding: 10px;
+    border-bottom: none;
+}
+
+div#search-result:last-child:hover {
+    width: 880px;
+    overflow: hidden;
+    background-color: rgba(240, 240, 240, .8);
+    padding: 10px;
+    border-bottom: none;
+}
+
+div#comment-container {
+    width: 880px;
+    overflow: hidden;
+    background-color: rgba(240, 240, 240, .4);
+    padding: 10px;
+    border-bottom: 2px solid #e1e1e1;
+}
+
+div#comment-container:hover {
+    width: 880px;
+    overflow: hidden;
+    background-color: rgba(240, 240, 240, .8);
+    padding: 10px;
+    border-bottom: 2px solid #d6d6d6;
+}
+
+div#comment-container:last-child {
+    width: 880px;
+    overflow: hidden;
+    background-color: rgba(240, 240, 240, .4);
+    padding: 10px;
+    border-bottom: none;
+}
+
+div#comment-container:last-child:hover {
+    width: 880px;
+    overflow: hidden;
+    background-color: rgba(240, 240, 240, .8);
+    padding: 10px;
+    border-bottom: none;
+}
+
+div#new-comment {
+    width: 880px;
+    overflow: hidden;
+    background-color: rgba(240, 240, 240, .4);
+    padding: 10px;
+    border-bottom: 2px solid #e1e1e1;
+}
+
+div#new-comment:hover {
+    width: 880px;
+    overflow: hidden;
+    background-color: rgba(240, 240, 240, .8);
+    padding: 10px;
+    border-bottom: 2px solid #d6d6d6;
+}
+
+div#new-comment:last-child {
+    width: 880px;
+    overflow: hidden;
+    background-color: rgba(240, 240, 240, .4);
+    padding: 10px;
+    border-bottom: none;
+}
+
+div#new-comment:last-child:hover {
+    width: 880px;
+    overflow: hidden;
+    background-color: rgba(240, 240, 240, .8);
+    padding: 10px;
+    border-bottom: none;
+}
+
+div#result-data {
+    width: 190px;
+    float: left;
+    text-align: center;
+}
+
+div#comment-data {
+    width: 190px;
+    float: left;
+    text-align: center;
+}
+
+div#result-votes {
+    font-size: 40px;
+}
+
+div#comment-votes {
+    font-size: 40px;
+}
+
+div#new-comment-title {
+    padding-top: 10px;
+    font-size: 25px;
+    height: 160px;
+    line-height: 160px;
+}
+
+div#result-content {
+    width: 684px;
+
+    float: left;
+    border-left: 1px solid #9a9a9a;
+    padding-left: 5px;
+}
+
+div#comment {
+    width: 684px;
+    min-height: 176px;
+    float: left;
+    border-left: 1px solid #9a9a9a;
+    padding-left: 5px;
+}
+
+div#result-title {
+    font-size: 20px;
+    border-bottom: 1px solid #9a9a9a;
+    margin-bottom: 5px;
+}
+
+a#result-link {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+a#title {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+a#report {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+a#report:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+textarea#new-comment-area {
+    width: 680px;
+    height: 100px;
+}
+
+input#new-comment-button {
+    height: 36px;
+    width: 686px;
+    font-size: 20px;
+    font-family: Alegreya;
+}
+
+div#new-content-warning {
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: rgba(0, 19, 255, 0.20);
+    border: 1px solid rgba(0, 19, 255, 0.4);
+}
+
+a#link-tutorial {
+    color: inherit;
+    text-decoration: underline;
+}
+
+a#link-tutorial:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+div#up-vote{
+    background-color: rgba(0, 128, 0, 0.1);
+    border: 1px solid rgba(0, 128, 0, 0.2);
+    margin-right:10px;
+    margin-top: 10px;
+    font-size: 20px;
+    color: #1c1c1c;
+    text-decoration: none;
+}
+
+
+div#up-vote:hover{
+    background-color: rgba(0, 128, 0, 0.2);
+    border: 1px solid rgba(0, 128, 0, 0.4);
+    margin-right:10px;
+    font-size: 20px;
+}
+
+div#down-vote{
+    background-color: rgba(128, 0, 0, 0.1);
+    border: 1px solid rgba(128, 0, 0, 0.2);
+    margin-right:10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #1c1c1c;
+    text-decoration: none;
+}
+
+
+div#down-vote:hover{
+    background-color: rgba(128, 0, 0, 0.2);
+    border: 1px solid rgba(128, 0, 0, 0.4);
+    margin-right:10px;
+    font-size: 20px;
+}
+
+a#vote-link{
+    color: #1c1c1c;
+    text-decoration: none;
+}

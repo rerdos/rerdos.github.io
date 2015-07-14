@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html ng-app="finalExam">
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+    <title>
+        Final exam - Grade calculator
+    </title>
+</head>
+<body ng-controller="mainCtrl" ng-cloak>
+    <header>
+        <div>
+            <nav class="fade-in">
+                <ul>
+                    <li ng-repeat="menu in menuData" ng-click="selectMenu(menu.id)" ng-class="{'active': menu.id===activeMenuIndex}">{{menu.name}}</li>
+                </ul>
+            </nav>
+            <span id="developer" class="fade-in">
+                Developed by: Richard Erdos
+            </span>
+        </div>
+    </header>
+    <div id="title" class="fade-in">
+        <h1>Final Exam</h1>
+        <h2>THE APP</h2>
+    </div>
+    <section class="fade-in">
+        <div id="my-grades" ng-show="activeMenuIndex===0">
+            <h1 class="center" ng-show="exams[0]===undefined">There are no grades. :(</h1>
+            <div ng-repeat="exam in exams">
+                <h3>
+                    {{exam.examName}} <span ng-click="updateExam(exam.id)" class="glyphicon glyphicon-pencil pointer" aria-hidden="true"></span> <span ng-click="deleteExam(exam.id)" class="glyphicon glyphicon-remove pointer" aria-hidden="true"></span>
+                </h3>
+                Exam type: <span class="bold">{{testTypes[exam.type].name}}</span>.<br>
+                You have earned: <span class="bold">{{exam.writtenEarned}} points</span> ({{Math.floor(exam.writtenEarned/exam.total*100)}}%).<br>
+                Total points: <span class="bold">{{exam.total}} points</span>.<br>
+                Current grade: <span class="bold">{{exam.currentGrade}}</span>.<br>
+                Next grade: <span class="bold">{{exam.currentGrade===5?"You already have the best grade. Well done":((exam.total-exam.writtenTotal)<(testTypes[exam.type].percentages[exam.currentGrade].value/100*parseInt(exam.total)-parseInt(exam.writtenEarned))? + "Unfortunately, you cannot get better grade": exam.currentGrade+1 + " (if you make at least " + (testTypes[exam.type].percentages[exam.currentGrade].value/100*parseInt(exam.total)-parseInt(exam.writtenEarned)) + " points out of " + (parseInt(exam.total)-parseInt(exam.writtenTotal)) + ")")}}</span>.<br>
+                Best grade: <span class="bold">{{exam.currentGrade>=4 || ((exam.total-exam.writtenTotal)<(testTypes[exam.type].percentages[exam.currentGrade].value/100*parseInt(exam.total)-parseInt(exam.writtenEarned)))?"There isn't better grade":exam.bestGrade + " (if you make at least " + (testTypes[exam.type].percentages[exam.bestGrade-1].value/100*parseInt(exam.total)-parseInt(exam.writtenEarned)) + " points out of " + (parseInt(exam.total)-parseInt(exam.writtenTotal)) + ")"}}</span>.
+            </div>
+            <hr>
+            <div ng-hide="isShowEdit">
+                <button type="button" class="btn btn-lg btn-dark" ng-click="toggleEdit()">New grade</button>
+                <button type="button" class="btn btn-lg btn-dark" ng-hide="exams[0]===undefined" ng-click="deleteAll()">Remove all</button>
+            </div>
+            <div ng-show="isShowEdit">
+                <h2 ng-show="isNewExam">Add {{exam.examName}}</h2>
+                <h2 ng-hide="isNewExam">Update {{exams[exam.id].examName}}</h2>
+                <div class="alert alert-danger" role="alert" ng-show="error">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Error:</span>
+                    {{errorMessage}}
+                </div>
+                <form ng-submit="saveExam(exam.id)">
+                    <div class="form-group">
+                        <label for="exam-name">Name of the exam:</label>
+                        <input type="text" class="form-control" id="exam-name" ng-model="exam.examName">
+                    </div>
+                    <div class="form-group">
+                        <label for="exam-type">Type of the exam:</label>
+                        <select class="form-control" id="exam-type" ng-model="exam.type" ng-options="type.id as type.name for type in testTypes">
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="written-total-points">Total points of the written section:</label>
+                        <input type="text" class="form-control" id="written-total-points" ng-model="exam.writtenTotal">
+                    </div>
+                    <div class="form-group">
+                        <label for="written-earned-points">Earned points of the written section:</label>
+                        <input type="text" class="form-control" id="written-earned-points" ng-model="exam.writtenEarned">
+                    </div>
+                    <div class="form-group">
+                        <label for="total-points">TOTAL points of the exam:</label>
+                        <input type="text" class="form-control" id="total-points" ng-model="exam.total">
+                    </div>
+                    <input type="submit" value="Submit" class="btn btn-lg btn-dark">
+                    <button type="button" class="btn btn-lg btn-dark right" ng-click="cancelEdit()">Cancel</button>
+                </form>
+            </div>
+        </div>
+        <div id="info" ng-show="activeMenuIndex===1">
+            <span class="bold">Please note:</span> These data are only valid for the Hungarian school leaving exams, also known as Matura exams.
+            <div ng-repeat="test in testTypes" class="exam">
+                <h3>
+                    {{test.name}} exam
+                </h3>
+                <table class="table">
+                    <tr>
+                        <th>Grade</th>
+                        <th>Percentage</th>
+                    </tr>
+                    <tr ng-repeat="grade in test.percentages | orderBy:'-id'">
+                        <td>{{grade.id+1}}</td>
+                        <td>{{test.percentages[grade.id].value}}% - {{grade.id===(test.percentages.length-1)?"100":test.percentages[grade.id+1].value-1}}%</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+    <script src="scripts/module.js"></script>
+    <script src="scripts/factory.js"></script>
+    <script src="scripts/controller.js"></script>
+</body>
+</html>
