@@ -15,33 +15,19 @@ author:
   title: Junior Front End Developer
   address: London, United Kingdom
   email: richard.erdos@me.com
-  link: http://ddbullfrog.com
+  link: http://rerdos.github.io
   weibo:
   github: rerdos
   linkedin: richarderdos
   gavatar: /assets/img/avatar.JPG
   workHistory:
     - work1:
-      company: Finzsoft Solutions Ltd
-      location: Auckland, New Zealand
-      title: Java Developer
-      started: 2014
-      duration: (2014 - Present)
-      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
-    - work2:
-      company: Agfa HealthCare
-      location: Shanghai, China
-      title: Java Developer
-      started: 2012
-      duration: (2012 - 2014)
-      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
-    - work3:
-      company: Citigroup Services and Technology (China) Limited
-      location: Shanghai, China
-      title: Java Developer
-      started: 2009
-      duration: (2009 - 2012)
-      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
+      company: MyMiniFactory
+      location: London, United Kingdom
+      started: 2015
+      duration: July 2015
+      github: https://github.com/rerdos/Assignment/
+      description: AngularJS application that requests 3D objects's data from a locally provided JSON file, then apply it into a fully responsive website with a simple search option that is powered by Angular filters. Furthermore, a modal has been applied from Angular Foundation library in order to bring more interactivity to the website. Responsive design was provided by Foundation library. Bower was used in order to manage AngularJS, Foundation and Angular-foundation libraries during and after the development.
   educationHistory:
     - education1:
       organization: Northeastern University
@@ -52,7 +38,7 @@ author:
       description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
   languages:
     - language1:
-      name: Hungaruan
+      name: Hungarian
       proficiency: Native
     - language2:
       name: English
