@@ -27,7 +27,7 @@ author:
       started: 2015
       duration: July 2015
       github: https://github.com/rerdos/Assignment/
-      description: AngularJS application that requests 3D objects's data from a locally provided JSON file, then apply it into a fully responsive website with a simple search option that is powered by Angular filters. Furthermore, a modal has been applied from Angular Foundation library in order to bring more interactivity to the website. Responsive design was provided by Foundation library. Bower was used in order to manage AngularJS, Foundation and Angular-foundation libraries during and after the development.
+      description: AngularJS application that requests 3D objects's data from a locally provided JSON file, then applies it into a fully responsive website with a simple search option that is powered by Angular filters. Furthermore, a modal has been applied from Angular Foundation library in order to bring more interactivity to the website. Responsive design was provided by Foundation library. Bower was used in order to manage AngularJS, Foundation and Angular-foundation libraries during and after the development.
   educationHistory:
     - education1:
       organization: Northeastern University
