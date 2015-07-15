@@ -25,21 +25,24 @@ author:
       location: London, United Kingdom
       started: 2015
       duration: July 2015
-      github: http://rerdos.co.uk/myminifactory
+      github: https://github.com/rerdos/Assignment
+      link: http://rerdos.co.uk/myminifactory
       description: AngularJS application that requests 3D objects's data from a locally provided JSON file, then applies it into a fully responsive website with a simple search option that is powered by Angular filters. Furthermore, a modal has been applied from Angular Foundation library in order to bring more interactivity to the website. Responsive design was provided by Foundation library. Bower was used in order to manage AngularJS, Foundation and Angular-foundation libraries during and after the development.
     - work2:
       company: Final Exam
       location: Hungary
       started: 2015
       duration: June 2015
-      github: http://rerdos.co.uk/finalexam
+      github: https://github.com/rerdos/rerdos.github.io/tree/master/finalexam
+      link: http://rerdos.co.uk/finalexam
       description: Single page application that calculates how many points the student must earn in order to get the better grade in the end of the Hungarian school leaving exam. This application has been developed in AngularJS. Data that the user has provided is stored in the LocalStorage, so users don't have to input their data each time when they visit the website. It contains Bootstrap in order to normalize the webpage (so it will appear the same in every browser) and to have predesigned alert boxes.
     - work3:
       company: Todo
       location: Hungary
       started: 2015
       duration: June 2015
-      github: http://rerdos.co.uk/todo
+      github: https://github.com/rerdos/rerdos.github.io/tree/master/todo
+      link: http://rerdos.co.uk/todo
       description: A simple ‘todo’ application that allows its users to add, delete or edit a new or existing to do. Interactivity is provided by AngularJS. The design of alert boxes, lists and buttons as well its responsive design come from Bootstrap framework.
   languages:
     - language1:
