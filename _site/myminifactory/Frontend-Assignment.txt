@@ -1,0 +1,14 @@
+Frontend Assignment:
+
+Please find attached an image of the basic structure of how your project should look like.
+
+Create a dynamic application which gets 3d objects' data from https://www.myminifactory.net/assignment.php 
+and displays it in the layout structure (image attached). Also add a simple search of 3d object titles using JavaScript, 
+which lets the user immediately see the effects of their search on the page. 
+
+The attached image is only a layout; since this is a frontend assignment, you can use your frontend skills by making it as attractive as you want.
+
+Note:
+1. The URL: https://www.myminifactory.net/assignment.php returns Json data for 8 3d objects.
+2. For extra points use AngularJs otherwise use jQuery.
+3. This is a very simple frontend assignment which shouldn't take more than 2 hours of you time.
