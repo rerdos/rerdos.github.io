@@ -25,14 +25,14 @@ author:
       location: London, United Kingdom
       started: 2015
       duration: July 2015
-      github: rerdos.co.uk/myminifactory
+      github: http://rerdos.co.uk/myminifactory
       description: AngularJS application that requests 3D objects's data from a locally provided JSON file, then applies it into a fully responsive website with a simple search option that is powered by Angular filters. Furthermore, a modal has been applied from Angular Foundation library in order to bring more interactivity to the website. Responsive design was provided by Foundation library. Bower was used in order to manage AngularJS, Foundation and Angular-foundation libraries during and after the development.
     - work1:
       company: Final Exam
       location: Hungary
       started: 2015
       duration: June 2015
-      github: rerdos.co.uk/finalexam
+      github: http://rerdos.co.uk/finalexam
       description: Single page application that calculates how many points the student must earn in order to get the better grade in the end of the Hungarian school leaving exam. This application has been developed in AngularJS. It contains Bootstrap in order to normalize the webpage (so it will appear the same in every browser) and to have predesigned alert boxes.
   educationHistory:
     - education1:

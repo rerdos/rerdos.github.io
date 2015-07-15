@@ -26,11 +26,11 @@ layout: default
                                     </p>
                                     <p>
                                         <small class="text-muted">
-                                            {% if work.duration %}
-                                                <i class="fa fa-calendar"></i> {{ work.duration }}<br>
-                                            {% endif %}
                                             {% if work.github %}
-                                                <i class="fa fa-desktop"></i> <a href="{{ work.github }}">{{ work.github }}</a><br>
+                                                <i class="fa fa-file"></i> <a href="{{ work.github }}">{{ work.github }}</a><br>
+                                            {% endif %}
+                                            {% if work.duration %}
+                                                <i class="fa fa-calendar"></i> {{ work.duration }} | 
                                             {% endif %}
                                             {% if work.location %}
                                                 <i class="fa fa-map-marker"></i>  {{ work.location }}
