@@ -27,21 +27,20 @@ author:
       duration: July 2015
       github: http://rerdos.co.uk/myminifactory
       description: AngularJS application that requests 3D objects's data from a locally provided JSON file, then applies it into a fully responsive website with a simple search option that is powered by Angular filters. Furthermore, a modal has been applied from Angular Foundation library in order to bring more interactivity to the website. Responsive design was provided by Foundation library. Bower was used in order to manage AngularJS, Foundation and Angular-foundation libraries during and after the development.
-    - work1:
+    - work2:
       company: Final Exam
       location: Hungary
       started: 2015
       duration: June 2015
       github: http://rerdos.co.uk/finalexam
-      description: Single page application that calculates how many points the student must earn in order to get the better grade in the end of the Hungarian school leaving exam. This application has been developed in AngularJS. It contains Bootstrap in order to normalize the webpage (so it will appear the same in every browser) and to have predesigned alert boxes.
-  educationHistory:
-    - education1:
-      organization: Northeastern University
-      degree: Bachelor
-      major: Software Engineering
-      started: 2005
-      duration: (2005 - 2009)
-      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
+      description: Single page application that calculates how many points the student must earn in order to get the better grade in the end of the Hungarian school leaving exam. This application has been developed in AngularJS. Data that the user has provided is stored in the LocalStorage, so users don't have to input their data each time when they visit the website. It contains Bootstrap in order to normalize the webpage (so it will appear the same in every browser) and to have predesigned alert boxes.
+    - work3:
+      company: Todo
+      location: Hungary
+      started: 2015
+      duration: June 2015
+      github: http://rerdos.co.uk/todo
+      description: A simple ‘todo’ application that allows its users to add, delete or edit a new or existing to do. Interactivity is provided by AngularJS. The design of alert boxes, lists and buttons as well its responsive design come from Bootstrap framework.
   languages:
     - language1:
       name: Hungarian
