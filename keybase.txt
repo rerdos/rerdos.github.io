@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/rerdos
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://rerdos.co.uk
+  * I am rerdos (https://keybase.io/rerdos) on keybase.
+  * I have a public key ASBE-DVbJQ88Jtei-r4OyozOpur_y2-GyoNiCUfAxhxc2wo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "012044f8355b250f3c26d7a2fabe0eca8ccea6eaffcb6f86ca83620947c0c61c5cdb0a",
+            "host": "keybase.io",
+            "kid": "012044f8355b250f3c26d7a2fabe0eca8ccea6eaffcb6f86ca83620947c0c61c5cdb0a",
+            "uid": "56d2094eeb38d5257458cbf594005319",
+            "username": "rerdos"
+        },
+        "service": {
+            "hostname": "rerdos.co.uk",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.20"
+    },
+    "ctime": 1491221063,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1491221052,
+        "hash": "71b660a81a167dd2f839ebb7e9731c75f0e078f9f305fab3c6592e9231c6d8d53a4046f4f046993f0a9e7a8effb4ed0048edce186e36028b1aa67d41e61a3782",
+        "seqno": 995887
+    },
+    "prev": "a9db1508dbb031ddee897e650340c4e18b1c496b1771cb87c62ad28877a5d23f",
+    "seqno": 8,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgRPg1WyUPPCbXovq+DsqMzqbq/8tvhsqDYglHwMYcXNsKp3BheWxvYWTFAvF7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwNDRmODM1NWIyNTBmM2MyNmQ3YTJmYWJlMGVjYThjY2VhNmVhZmZjYjZmODZjYTgzNjIwOTQ3YzBjNjFjNWNkYjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNDRmODM1NWIyNTBmM2MyNmQ3YTJmYWJlMGVjYThjY2VhNmVhZmZjYjZmODZjYTgzNjIwOTQ3YzBjNjFjNWNkYjBhIiwidWlkIjoiNTZkMjA5NGVlYjM4ZDUyNTc0NThjYmY1OTQwMDUzMTkiLCJ1c2VybmFtZSI6InJlcmRvcyJ9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoicmVyZG9zLmNvLnVrIiwicHJvdG9jb2wiOiJodHRwOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4yMCJ9LCJjdGltZSI6MTQ5MTIyMTA2MywiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDkxMjIxMDUyLCJoYXNoIjoiNzFiNjYwYTgxYTE2N2RkMmY4MzllYmI3ZTk3MzFjNzVmMGUwNzhmOWYzMDVmYWIzYzY1OTJlOTIzMWM2ZDhkNTNhNDA0NmY0ZjA0Njk5M2YwYTllN2E4ZWZmYjRlZDAwNDhlZGNlMTg2ZTM2MDI4YjFhYTY3ZDQxZTYxYTM3ODIiLCJzZXFubyI6OTk1ODg3fSwicHJldiI6ImE5ZGIxNTA4ZGJiMDMxZGRlZTg5N2U2NTAzNDBjNGUxOGIxYzQ5NmIxNzcxY2I4N2M2MmFkMjg4NzdhNWQyM2YiLCJzZXFubyI6OCwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEDR0vLe9Ao/70fh1RdobY7MT9OvXn3PYimbm3NMaHMZw9vNVNI2CaRofdHrq1JUVXndTUT9P+qp8sHILvJUCTIMqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgBcb6cOTdDqPcb/LGhBkDqk4uKNOa3FGxLV1S+kgpN+yjdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/rerdos
+
+==================================================================
